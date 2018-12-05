@@ -1,12 +1,21 @@
-ul,ol{list-style: none;}
-*{margin:0;padding:0;}
+ul, ol {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .icon {
-  width: 1em; height: 1em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
 }
-#xxx{
+
+#xxx {
   display: block;
   background: white;
   position: fixed;
@@ -14,82 +23,98 @@ ul,ol{list-style: none;}
   left: 0;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
-
-.actions{
+.actions {
   position: fixed;
   top: 0;
   left: 0;
   padding: 20px;
 }
-.actions svg{
+
+.actions svg {
   width: 1.5em;
   height: 1.5em;
   transition: all 0.3s;
   margin: 0 10px;
 }
-.actions svg.active{
+
+.actions svg.active {
   fill: red;
   transform: scale(1.2);
 }
-.colors{
+
+.colors {
   position: fixed;
   top: 60px;
   left: 28px;
 }
-.colors> li{
+
+.colors>li {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   margin: 10px 0;
   transition: all 0.3s;
 }
-.colors> li.red{
+
+.colors>li.red {
   background: red;
 }
-.colors> li.orange{
+
+.colors>li.orange {
   background: orange;
 }
-.colors> li.yellow{
+
+.colors>li.yellow {
   background: yellow;
 }
-.colors> li.green{
+
+.colors>li.green {
   background: green;
 }
-.colors> li.cyan{
+
+.colors>li.cyan {
   background: cyan;
 }
-.colors> li.blue{
+
+.colors>li.blue {
   background: blue;
 }
-.colors> li.purple{
+
+.colors>li.purple {
   background: purple;
 }
-.colors> li.black{
+
+.colors>li.black {
   background: black;
 }
-.colors> li.active{
-  box-shadow: 0 0 3px rgba(0,0,0,0.95);
+
+.colors>li.active {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
   transform: scale(1.2);
 }
+
 .sizes {
   position: fixed;
   right: 20px;
   top: 10px;
 }
-.sizes > li {
+
+.sizes>li {
   margin: 20px 0;
 }
-.sizes > .thin{
+
+.sizes>.thin {
   height: 0;
   width: 20px;
   border-top: 3px solid black;
 }
-.sizes > .thick{
+
+.sizes>.thick {
   height: 0;
   width: 20px;
   border-top: 6px solid black;
