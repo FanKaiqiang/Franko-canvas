@@ -1,48 +1,82 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<link rel="stylesheet" href="./style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<title>我的画板</title>
-<canvas id="xxx" width=300 height=300></canvas>
-<div id=actions class="actions">
-  <svg id=danchu class="icon">
-    <use xlink:href="#icon-danchu"></use>
-  </svg>
-  <svg id=pen class="active icon">
-    <use xlink:href="#icon-pen"></use>
-  </svg>
-  <svg id=brush class="icon">
-    <use xlink:href="#icon-shuazi"></use>
-  </svg>
-  <svg id=eraser class="icon">
-    <use xlink:href="#icon-erase"></use>
-  </svg>
-  <svg id=clear class="icon">
-    <use xlink:href="#icon-clear"></use>
-  </svg>
-  <svg id=download class="icon">
-    <use xlink:href="#icon-save"></use>
-  </svg>
-</div>
-<ol class="colors">
-  <li id="red" class="red"></li>
-  <li id="orange" class="orange"></li>
-  <li id="yellow" class="yellow"></li>
-  <li id="green" class="green"></li>
-  <li id="cyan" class="cyan"></li>
-  <li id="blue" class="blue"></li>
-  <li id="purple" class="purple"></li>
-  <li id="black" class="black"></li>
-</ol>
-<ol class="sizes">
-  <li id="thin" class="thin"></li>
-  <li id="thick" class="thick"></li>
-</ol>
+
+<head>
+  <html lang="zh-Hans">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Franko 画板</title>
+</head>
+
+<body>
+  <header>
+    <div class="title">Franko 画板</div>
+    <div class="clean item" id="clear">清屏</div>
+    <div class="save item" id="download">保存</div>
+  </header>
+  <main id="wrapper">
+    <canvas id="xxx"></canvas>
+  </main>
+
+  <aside>
+
+    <div class="title">工具选取</div>
+    <div id=actions class="actions">
+      <svg id=pen class="active icon">
+        <use xlink:href="#icon-qianbi"></use>
+      </svg>
+      <svg id=brush class="icon">
+        <use xlink:href="#icon-shuitong"></use>
+      </svg>
+      <svg id=eraser class="icon">
+        <use xlink:href="#icon-xiangpi"></use>
+      </svg>
+    </div>
+
+    <div class="title">颜色选择</div>
+    <ol class="colors" id="colors">
+      <li class="black"></li>
+      <li class="white"></li>
+      <li class="red"></li>
+      <li class="orange"></li>
+      <li class="yellow"></li>
+      <li class="green"></li>
+      <li class="cyan"></li>
+      <li class="blue"></li>
+      <li class="purple"></li>
+      <li class="grey"></li>
+      <li class="pink"></li>
+      <li class="brown"></li>
+    </ol>
+
+    <div class="title">自定义颜色</div>
+    <div class="divColor">
+      <input type="color" id="colorPick" />
+      <input type="text" name="clolrBind" id="colorBind" value="#000000" placeholder="输入颜色">
+    </div>
+
+    <div class="title">画笔粗细</div>
+    <div class="divPen">
+      <input type="range" name="dai" id="dai" step="1" min="2" max="50" value="5" />
+      <input type="number" id="daiBind" placeholder="输入画笔粗细" step="1" min="2" max="50" value="5"> 像素
+    </div>
+
+    <div class="title">画板大小</div>
+    
+    <div class="size">
+      <div>宽 <input type="number" id="setWidth" placeholder="输入画笔粗细" step="10" min="250" max="2000" value="960"> 像素</div>
+      <div>高 <input type="number" id="setHeight" placeholder="输入画笔粗细" step="10" min="250" max="2000" value="480"> 像素</div>
+      <div class="tip">注意：重置画板大小时会触发清屏</div>
+    </div>
+  </aside>
+  <script src="//at.alicdn.com/t/font_864260_xbm3hmzdgh.js"></script>
+
+  <script src="./script/tool.js"></script>
+  <script src="./script/canvas.js"></script>
+  <script src="./main.js"></script>
+
+</body>
 
 
-<script src="//at.alicdn.com/t/font_478967_6n4o5i5mnff4unmi.js"></script>
-<script src="//at.alicdn.com/t/font_864260_qfba7k8q1s.js"></script>
-<script src="./main.js"></script>
 
 </html>
