@@ -1,10 +1,12 @@
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .icon {
@@ -15,23 +17,77 @@ ul, ol {
   overflow: hidden;
 }
 
+header {
+  height: 50px;
+  width: calc(100% - 250px);
+  position: fixed;
+  background: #f0f2f3;
+  z-index: 1;
+  color: #0064b6;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  user-select: none;
+}
+
+header > .title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+header > .item {
+  width: 80px;
+  border: 1px solid #d4d9e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > .item:hover {
+  background: #dbdde3;
+}
+
+main {
+  position: fixed;
+  top:50px;
+  background: #b5b8b6;
+  width: calc(100% - 250px);
+  height: calc(100% - 50px);
+  overflow: scroll;
+}
 #xxx {
   display: block;
   background: white;
+  margin: 30px 50px;
+  border: 1px solid #cbcdcc;
+  cursor: crosshair;
+}
+
+aside {
+  user-select: none;
   position: fixed;
-  top: 0;
-  left: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: #f0f2f3;
+  border: 1px solid #d4d9e2;
 }
-
-body {
-  overflow: hidden;
-}
-
-.actions {
+/* .actions {
   position: fixed;
   top: 0;
   left: 0;
   padding: 20px;
+} */
+
+aside .title {
+  font-size: 20px;
+  color: #0064b6;
+  padding: .85em 1em;
+}
+.actions{
+  display: flex;
+  justify-content: space-around;
 }
 
 .actions svg {
@@ -42,80 +98,81 @@ body {
 }
 
 .actions svg.active {
-  fill: red;
-  transform: scale(1.2);
+  fill: #0064b6;
+  background: #888;
+  transform: scale(1.5);
 }
 
 .colors {
-  position: fixed;
-  top: 60px;
-  left: 28px;
+  display: flex;
+  width: 210px;
+  flex-wrap: wrap;
+  margin: 0 20px;
 }
 
-.colors>li {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.colors > li {
+  width: 35px;
+  height: 35px;
+  /* border-radius: 50%; */
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-  margin: 10px 0;
-  transition: all 0.3s;
 }
 
-.colors>li.red {
-  background: red;
-}
-
-.colors>li.orange {
-  background: orange;
-}
-
-.colors>li.yellow {
-  background: yellow;
-}
-
-.colors>li.green {
-  background: green;
-}
-
-.colors>li.cyan {
-  background: cyan;
-}
-
-.colors>li.blue {
-  background: blue;
-}
-
-.colors>li.purple {
-  background: purple;
-}
-
-.colors>li.black {
-  background: black;
-}
-
-.colors>li.active {
+.colors > li.active {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
-  transform: scale(1.2);
 }
 
-.sizes {
+.divColor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.divPen {
+  display: flex;
+  align-items: center;
+}
+input[type="text"] {
+  width: 85px;
+  height: 32px;
+  padding-left: 0.5em;
+}
+/* .sizes {
   position: fixed;
   right: 20px;
   top: 10px;
+} */
+input[type="number"] {
+  width: 50px;
+  height: 32px;
+  padding-left: 0.5em;
+  margin-left: 15px;
+  margin-right: 0.5em;
 }
 
-.sizes>li {
+input[type="range"] {
+  width: 100px;
+  margin-left: 21px;
+}
+
+.sizes > li {
   margin: 20px 0;
 }
 
-.sizes>.thin {
-  height: 0;
-  width: 20px;
-  border-top: 3px solid black;
+#colorPick {
+  width: 50px;
+  height: 50px;
 }
 
-.sizes>.thick {
-  height: 0;
-  width: 20px;
-  border-top: 6px solid black;
+.size{
+  padding-left: 20px;
+}
+.size input[type="number"] {
+  width: 100px;
+  height: 32px;
+  padding-left: 0.5em;
+  margin: 0.25em 0.5em;
+}
+.size > .tip{
+  font-size: 14px;
+  color:#666;
+  padding-top: .5em;
 }
