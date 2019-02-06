@@ -1,12 +1,4 @@
-/******/
-
-// function autoSetCanvasSize(canvas) {
-//   setCanvasSize(960, 480)
-// }
-
 function setCanvasSize(canvas, x = 960, y = 480) { //设置画板大小
-  // var pageWidth = document.documentElement.clientWidth
-  // var pageHeight = document.documentElement.clientHeight
   canvas.width = x
   canvas.height = y
 }
@@ -40,52 +32,8 @@ function listenToUser(canvas) { //监听用户
   wrapper.onscroll = (e) => {//窗口滚动
     scroll.y = e.target.scrollTop
     scroll.x = e.target.scrollLeft
-    console.log(scroll.y)
   }
 
-  // // 特性检测
-  // if (document.body.ontouchstart !== undefined) {
-  //   // 触屏设备 苏菲就是个触屏设备啊哥
-  //   canvas.ontouchstart = function (aaa) {
-  //     var x = aaa.touches[0].clientX
-  //     var y = aaa.touches[0].clientY
-  //     console.log(x, y)
-  //     using = true
-  //     if (eraserEnabled) {
-  //       context.clearRect(x - 5, y - 5, 30, 30)
-  //     } else {
-  //       lastPoint = {
-  //         "x": x,
-  //         "y": y
-  //       }
-  //       drawCircle(x, y, circleWidth)
-  //     }
-  //   }
-  //   canvas.ontouchmove = function (aaa) {
-  //     console.log('边摸边动')
-  //     var x = aaa.touches[0].clientX
-  //     var y = aaa.touches[0].clientY
-
-  //     if (!using) { return }
-
-  //     if (eraserEnabled) {
-  //       context.clearRect(x - 5, y - 5, 30, 30)
-  //     } else {
-  //       var newPoint = {
-  //         "x": x,
-  //         "y": y
-  //       }
-  //       drawCircle(x, y, circleWidth)
-  //       drawLine(lastPoint.x, lastPoint.y, newPoint.x, newPoint.y)
-  //       lastPoint = newPoint
-  //     }
-  //   }
-  //   canvas.ontouchend = function () {
-  //     console.log('摸完了')
-  //     using = false
-  //   }
-  // } else {
-  // 非触屏设备
   canvas.onmousedown = function (aaa) {//按下鼠标
     var x = aaa.clientX
     var y = aaa.clientY
@@ -128,5 +76,3 @@ function listenToUser(canvas) { //监听用户
     using = false
   }
 }
-
-// }

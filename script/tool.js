@@ -42,7 +42,6 @@ download.onclick = function () {/*保存画作 */
 }
 
 colors.onclick = function (e) {  //选择画笔颜色
-  console.log(e.target.classList)
   context.fillStyle = e.target.classList[0]
   context.strokeStyle = e.target.classList[0]
 }

@@ -73,12 +73,6 @@ aside {
   background: #f0f2f3;
   border: 1px solid #d4d9e2;
 }
-/* .actions {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px;
-} */
 
 aside .title {
   font-size: 20px;
@@ -113,7 +107,6 @@ aside .title {
 .colors > li {
   width: 35px;
   height: 35px;
-  /* border-radius: 50%; */
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -135,11 +128,6 @@ input[type="text"] {
   height: 32px;
   padding-left: 0.5em;
 }
-/* .sizes {
-  position: fixed;
-  right: 20px;
-  top: 10px;
-} */
 input[type="number"] {
   width: 50px;
   height: 32px;
