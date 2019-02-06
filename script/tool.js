@@ -1,20 +1,23 @@
 var eraserEnabled = false/*初始不使用橡皮 */
+var brushEnabled = false/*初始不使用颜料桶 */
+
 pen.onclick = function () {/*点击笔使用笔*/
   eraserEnabled = false
+  brushEnabled = false
   pen.classList.add('active')
   eraser.classList.remove('active')
   brush.classList.remove('active')
 }
 brush.onclick = function () {/*点击笔使用笔*/
-  lineWidth = 2000
-  circleWidth = 2000
   eraserEnabled = false
+  brushEnabled = true
   brush.classList.add('active')
   eraser.classList.remove('active')
   pen.classList.remove('active')
 }
 eraser.onclick = function () {/*点击笔使用橡皮*/
   eraserEnabled = true
+  brushEnabled = false
   eraser.classList.add('active')
   pen.classList.remove('active')
   brush.classList.remove('active')

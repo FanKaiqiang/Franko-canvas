@@ -92,7 +92,10 @@ function listenToUser(canvas) { //监听用户
     using = true
     if (eraserEnabled) {
       context.clearRect(x - 66 + scroll.x, y - 96 + scroll.y, 30, 30)
-    } else {
+    } else if (brushEnabled) {
+      context.fillRect(0, 0, 2000, 2000)
+    }
+    else {
       lastPoint = {
         "x": x + scroll.x,
         "y": y + scroll.y
