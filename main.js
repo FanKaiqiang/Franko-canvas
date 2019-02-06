@@ -5,6 +5,12 @@ var circleWidth = 2.5
 
 var list = document.querySelectorAll('.colors > li')
 for (let item of list) {
+  item.onclick = (e) =>{
+    for(let item of list){
+      item.classList.remove('active')
+    }
+    item.classList.add('active')
+  }
   item.style.cssText = `background:${item.classList.value}`
 }
 

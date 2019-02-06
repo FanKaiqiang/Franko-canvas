@@ -100,7 +100,6 @@ function listenToUser(canvas) { //监听用户
         "x": x + scroll.x,
         "y": y + scroll.y
       }
-      console.log(scroll.x)
       drawCircle(x + scroll.x, y + scroll.y, circleWidth)
     }
   }

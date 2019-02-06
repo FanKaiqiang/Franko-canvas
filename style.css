@@ -99,7 +99,7 @@ aside .title {
 
 .actions svg.active {
   fill: #0064b6;
-  background: #888;
+  background: #dbdde3;
   transform: scale(1.5);
 }
 
@@ -118,7 +118,7 @@ aside .title {
 }
 
 .colors > li.active {
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.95);
+  border: 3px solid #dbdde3;
 }
 
 .divColor {
